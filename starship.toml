@@ -2,6 +2,33 @@
 
 add_newline = true
 
+[directory]
+read_only = " "
+
+[docker_context]
+symbol = " "
+
+[git_branch]
+symbol = " "
+
+[golang]
+symbol = " "
+
+[lua]
+symbol = " "
+
+[nodejs]
+symbol = " "
+
+[package]
+symbol = " "
+
+[python]
+symbol = " "
+
+[rust]
+symbol = " "
+
 [time]
 disabled = false
 format = '[\[ $time \]]($style) '
