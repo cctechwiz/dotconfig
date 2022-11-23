@@ -1,2 +1,8 @@
+# Common
+alias ll='ls -hal'
+alias la='ls -hal'
+alias ..='cd ..'
+alias ...='cd ../..'
+
 # Neovim
-alias vim="nvim"
+alias vim='nvim'
