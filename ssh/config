@@ -1,1 +1,2 @@
 Include ~/.config/ssh/config.d/*.conf
+Include ~/.config/ssh/config.d/*.private
