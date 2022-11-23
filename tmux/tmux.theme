@@ -1,0 +1,50 @@
+# Enable status line and set refresh interval
+set -g status on
+set -g status-interval 5
+
+# Colors
+## Handy to help pick colors:
+## $> for i in {0..255}; do printf "\x1b[38;5;${i}mcolour${i}\x1b[0m\n" done
+accent_color="colour71"
+bg_color="colour236"
+bell_color="colour9"
+activity_color="yellow"
+light_text="white"
+dark_text="black"
+
+# Widgets
+wg_keys_off="#([ $(tmux show-options -qv key-table) = 'off' ] && echo '#[bg=$bg_color]#[fg=$light_text]OFF #[fg=$accent_color].:.')"
+wg_whoami="${lock} #(whoami)@#H "
+wg_session="#{session_attached}"
+
+set -g pane-active-border-bg default
+set -g pane-active-border-fg $accent_color
+set -g pane-border-fg $bg_color
+
+set -g message-fg $dark_text
+set -g message-bg $accent_color
+
+set -g status-justify left
+set -g status-bg $bg_color
+set -g status-fg $accent_color
+
+setw -g clock-mode-colour $accent_color
+
+setw -g status-left " #S .:. #{session_attached} "
+setw -g status-left-fg $dark_text
+setw -g status-left-bg $accent_color
+
+set -g status-right-length "100"
+set -g status-right "${wg_keys_off}#[bg=$bg_color]#[fg=$light_text] %a %B %-d, %Y #[fg=$accent_color].:. #[fg=$light_text]%H:%M #[fg=$dark_text,bg=$accent_color]${wg_whoami}"
+
+setw -g window-status-format " #I: #W "
+# separator symbols: ┃ ║ │ ❮  ❯ ╲ ╱ left bar: ⎸ right bar: ⎹
+setw -g window-status-separator ""
+setw -g window-status-fg $light_text
+
+setw -g window-status-current-fg $accent_color
+setw -g window-status-current-bg $bg_color
+setw -g window-status-current-format "#[fg=$light_text] #[fg=$accent_color]#I: #W#[fg=$light_text] "
+
+setw -g window-status-bell-fg $bell_color
+setw -g window-status-activity-fg $activity_color
