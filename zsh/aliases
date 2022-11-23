@@ -4,5 +4,8 @@ alias la='ls -hal'
 alias ..='cd ..'
 alias ...='cd ../..'
 
+# Kitty
+alias theme='kitty +kitten themes'
+
 # Neovim
 alias vim='nvim'
