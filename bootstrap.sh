@@ -9,9 +9,9 @@ echo "Configuring ssh"
 echo "---------------"
 if ! command -v ssh > /dev/null 2>&1
 then
-    echo >&2 "ssh could not be found... uh... better fix that"
+  echo >&2 "ssh could not be found... uh... better fix that"
 else
-    ln -s $HOME/.config/ssh/config $HOME/.ssh/config
+  ln -s $HOME/.config/ssh/config $HOME/.ssh/config
 fi
 
 
@@ -21,10 +21,12 @@ echo "Configuring zsh"
 echo "---------------"
 if ! command -v zsh > /dev/null 2>&1
 then
-    echo >&2 "zsh could not be found, skipping configuration"
+  echo >&2 "zsh could not be found, skipping configuration"
 else
-    ln -s $HOME/.config/zsh/profile $HOME/.zprofile
-    ln -s $HOME/.config/zsh/rc $HOME/.zshrc
+  sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  brew install starship
+  ln -s $HOME/.config/zsh/profile $HOME/.zprofile
+  ln -s $HOME/.config/zsh/rc $HOME/.zshrc
 fi
 
 
@@ -34,9 +36,9 @@ echo "Configuring zsh"
 echo "---------------"
 if ! command -v zsh > /dev/null 2>&1
 then
-    echo >&2 "git could not be found, install with 'brew install git' or more likely xcode command line tools"
+  echo >&2 "git could not be found, install with 'brew install git' or more likely xcode command line tools"
 else
-    ln -s $HOME/.config/git/config $HOME/.gitconfig
+  ln -s $HOME/.config/git/config $HOME/.gitconfig
 fi
 
 
@@ -46,14 +48,14 @@ echo "Configuring neovim"
 echo "------------------"
 if ! command -v nvim > /dev/null 2>&1
 then
-    echo >&2 "nvim could not be found, install with 'brew install neovim'"
+  echo >&2 "nvim could not be found, install with 'brew install neovim'"
 else
-    echo "Downloading nvim plugin manager plug.vim"
-    sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
-           https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  echo "Downloading nvim plugin manager plug.vim"
+  sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
-    echo "Installing nvim plugins"
-    nvim +PlugInstall +qall
+  echo "Installing nvim plugins"
+  nvim +PlugInstall +qall
 fi
 
 
@@ -63,10 +65,10 @@ echo "Configuring tmux"
 echo "----------------"
 if ! command -v tmux > /dev/null 2>&1
 then
-    echo >&2 "tmux could not be found, install with 'brew install tmux'"
+  echo >&2 "tmux could not be found, install with 'brew install tmux'"
 else
-    echo "Linking tmux configs"
-    ln -s $HOME/.config/tmux/tmux.conf $HOME/.tmux.conf
-    ln -s $HOME/.config/tmux/tmux.theme $HOME/.tmux.theme
+  echo "Linking tmux configs"
+  ln -s $HOME/.config/tmux/tmux.conf $HOME/.tmux.conf
+  ln -s $HOME/.config/tmux/tmux.theme $HOME/.tmux.theme
 fi
 
