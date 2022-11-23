@@ -15,20 +15,28 @@ else
 fi
 
 
+#echo ""
+#echo "---------------"
+#echo "Configuring git"
+#echo "---------------"
+#if ! command -v git > /dev/null 2>&1
+#then
+#    echo >&2 "zsh could not be foundi, skipping configuration"
+#else
+#    ln -s $HOME/.config/zsh/profile $HOME/.zprofile
+#    ln -s $HOME/.config/zsh/rc $HOME/.zshrc
+#fi
+
+
 echo ""
 echo "---------------"
-echo "Configuring git"
+echo "Configuring zsh"
 echo "---------------"
-if ! command -v git > /dev/null 2>&1
+if ! command -v zsh > /dev/null 2>&1
 then
     echo >&2 "git could not be found, install with 'brew install git' or more likely xcode command line tools"
 else
-    echo "Configuring git"
-    git config --global user.name "Josh Maxwell"
-    git config --global user.email cctechwiz@gmail.com
-    git config --global init.defaultBranch main
-    git config --global --add push.default current
-    git config --global --add push.autoSetupRemote true
+    ln -s $HOME/.config/git/config $HOME/.gitconfig
 fi
 
 

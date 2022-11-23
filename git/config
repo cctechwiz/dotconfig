@@ -1,0 +1,10 @@
+[user]
+	name = Josh Maxwell
+	email = cctechwiz@gmail.com
+[init]
+	defaultBranch = main
+[push]
+	default = current
+	autoSetupRemote = true
+	default = current
+	autoSetupRemote = true
