@@ -5,6 +5,18 @@ echo "Bootstrapping new system config..."
 
 echo ""
 echo "---------------"
+echo "Configuring ssh"
+echo "---------------"
+if ! command -v ssh > /dev/null 2>&1
+then
+    echo >&2 "ssh could not be found... uh... better fix that"
+else
+    ln -s $HOME/.config/ssh/config $HOME/.ssh/config
+fi
+
+
+echo ""
+echo "---------------"
 echo "Configuring git"
 echo "---------------"
 if ! command -v git > /dev/null 2>&1
