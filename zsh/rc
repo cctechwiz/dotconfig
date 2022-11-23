@@ -1,4 +1,8 @@
 source $HOME/.config/zsh/aliases
 
+export EDITOR=nvim
+
+export PATH=$PATH:$(go env GOPATH)/bin
+
 eval "$(starship init zsh)"
 
