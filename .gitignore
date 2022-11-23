@@ -1,2 +1,11 @@
+# Common
 **.private
+
+# Neovim
+undodir
+autoload
+plugged
+.netrwhist
+
+# GitHub CLI
 gh/hosts.yml

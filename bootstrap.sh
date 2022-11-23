@@ -15,17 +15,17 @@ else
 fi
 
 
-#echo ""
-#echo "---------------"
-#echo "Configuring git"
-#echo "---------------"
-#if ! command -v git > /dev/null 2>&1
-#then
-#    echo >&2 "zsh could not be foundi, skipping configuration"
-#else
-#    ln -s $HOME/.config/zsh/profile $HOME/.zprofile
-#    ln -s $HOME/.config/zsh/rc $HOME/.zshrc
-#fi
+echo ""
+echo "---------------"
+echo "Configuring zsh"
+echo "---------------"
+if ! command -v zsh > /dev/null 2>&1
+then
+    echo >&2 "zsh could not be found, skipping configuration"
+else
+    ln -s $HOME/.config/zsh/profile $HOME/.zprofile
+    ln -s $HOME/.config/zsh/rc $HOME/.zshrc
+fi
 
 
 echo ""
