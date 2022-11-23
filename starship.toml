@@ -1,3 +1,5 @@
+# https://starship.rs/config
+
 add_newline = true
 
 [time]
