@@ -1,4 +1,4 @@
-alias vim="nvim"
+source $HOME/.config/zsh/aliases
 
 eval "$(starship init zsh)"
 
