@@ -6,6 +6,7 @@ alias ...='cd ../..'
 
 # Kitty
 alias theme='kitty +kitten themes'
+alias hg="kitty +kitten hyperlinked_grep"
 
 # Neovim
 alias vim='nvim'
