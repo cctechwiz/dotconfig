@@ -7,7 +7,7 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=$PATH:$(go env GOPATH)/bin
 
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME=""
+ZSH_THEME="" # Using Starship instead (see below)
 #ZSH_THEME="amuse"
 
 # Uncomment the following line to use case-sensitive completion.
@@ -50,10 +50,15 @@ ZSH_THEME=""
 
 HIST_STAMPS="yyyy-mmm-dd"
 
-plugins=(git)
+# Built-in Plugins: https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins
+# Community Plugins: https://github.com/orgs/zsh-users/repositories
+plugins=(
+  git # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git
+)
 
 source $ZSH/oh-my-zsh.sh
 
 source $HOME/.config/zsh/aliases
 
+# https://starship.rs/config
 eval "$(starship init zsh)"
