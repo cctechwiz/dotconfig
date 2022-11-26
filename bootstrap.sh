@@ -24,6 +24,7 @@ then
   echo >&2 "zsh could not be found, skipping configuration"
 else
   sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
   brew install starship
   ln -s $HOME/.config/zsh/profile $HOME/.zprofile
   ln -s $HOME/.config/zsh/rc $HOME/.zshrc

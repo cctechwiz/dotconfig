@@ -50,15 +50,22 @@ ZSH_THEME="" # Using Starship instead (see below)
 
 HIST_STAMPS="yyyy-mmm-dd"
 
-# Built-in Plugins: https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins
-# Community Plugins: https://github.com/orgs/zsh-users/repositories
 plugins=(
-  git # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git
+# Built-in Plugins: https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins
+  gh      # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/gh
+  git     # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git
+  golang  # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/golang
+  macos   # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/macos
+
+# Community Plugins: https://github.com/orgs/zsh-users/repositories
+  zsh-syntax-highlighting # https://github.com/zsh-users/zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
 
 source $HOME/.config/zsh/aliases
+
+# eval "$(bw completion --shell zsh); compdef _bw bw;"
 
 # https://starship.rs/config
 eval "$(starship init zsh)"
