@@ -65,7 +65,9 @@ source $ZSH/oh-my-zsh.sh
 
 source $HOME/.config/zsh/aliases
 
-# eval "$(bw completion --shell zsh); compdef _bw bw;"
+# Zsh completions
+eval "$(bw completion --shell zsh); compdef _bw bw;"
+eval "$(hugo completion zsh); compdef _hugo hugo;"
 
 # https://starship.rs/config
 eval "$(starship init zsh)"
