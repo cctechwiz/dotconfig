@@ -60,6 +60,7 @@ return require('packer').startup(function(use)
   --misc
   use 'theprimeagen/harpoon'
   use 'mbbill/undotree'
+  use 'nvim-lualine/lualine.nvim'
 
 
   --themes
