@@ -1,3 +1,7 @@
+--Buffer line
+require("bufferline").setup{}
+
+--Status line
 require('lualine').setup {
   options = {
     icons_enabled = true,
