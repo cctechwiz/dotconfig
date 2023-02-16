@@ -1,5 +1,7 @@
 # Common
 **.private
+**.qualtrics
+ssh/
 
 # Neovim
 undodir
@@ -8,4 +10,5 @@ plugged
 .netrwhist
 
 # GitHub CLI
-gh/hosts.yml
+gh/
+git/

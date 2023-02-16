@@ -52,7 +52,7 @@ HIST_STAMPS="yyyy-mmm-dd"
 
 plugins=(
 # Built-in Plugins: https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins
-  gh      # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/gh
+  #gh      # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/gh
   git     # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git
   golang  # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/golang
   macos   # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/macos
@@ -64,10 +64,13 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 source $HOME/.config/zsh/aliases
+source $HOME/.config/zsh/secrets.private
 
 # Zsh completions
-eval "$(bw completion --shell zsh); compdef _bw bw;"
-eval "$(hugo completion zsh); compdef _hugo hugo;"
+#eval "$(bw completion --shell zsh); compdef _bw bw;"
+#eval "$(hugo completion zsh); compdef _hugo hugo;"
+
+export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"
 
 # https://starship.rs/config
 eval "$(starship init zsh)"
