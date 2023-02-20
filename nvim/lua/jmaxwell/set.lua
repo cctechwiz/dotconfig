@@ -1,5 +1,7 @@
 vim.opt.guicursor = ""
 
+vim.opt.clipboard = "unnamedplus"
+
 vim.opt.nu = true
 vim.opt.relativenumber = true
 vim.opt.title = true
