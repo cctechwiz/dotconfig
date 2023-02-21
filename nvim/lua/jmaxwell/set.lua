@@ -14,7 +14,7 @@ vim.opt.expandtab = true
 
 vim.opt.smartindent = true
 
-vim.opt.wrap = false
+vim.opt.wrap = true
 
 vim.opt.swapfile = false
 vim.opt.backup = false
@@ -40,3 +40,15 @@ vim.opt.splitbelow = true
 vim.opt.list = true
 --vim.opt.listchars = {eol = "⚬", tab = "▸▸", trail = "␣"}
 vim.opt.listchars = { tab = "▸▸", trail = "␣" }
+
+
+-- [[ Highlight on yank ]]
+-- See `:help vim.highlight.on_yank()`
+local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
+vim.api.nvim_create_autocmd('TextYankPost', {
+  callback = function()
+    vim.highlight.on_yank()
+  end,
+  group = highlight_group,
+  pattern = '*',
+})
