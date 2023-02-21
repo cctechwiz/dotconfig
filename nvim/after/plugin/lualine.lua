@@ -18,8 +18,19 @@ require("bufferline").setup {
 require('lualine').setup {
   options = {
     icons_enabled = true,
-    theme = 'nightfox', --TODO: Move setting this into colors.lua if possible
-    component_separators = '|',
-    section_separators = '',
+    theme = 'nightfox',
+    --component_separators = '|',
+    --section_separators = '',
+    component_separators = { left = '', right = '' },
+    section_separators = { left = '', right = '' },
   },
+
+  sections = {
+    lualine_c = {
+      {
+        'filename',
+        path = 1,
+      }
+    }
+  }
 }
