@@ -1,4 +1,8 @@
+-- [[ Set leader to space ]]
 vim.g.mapleader = " "
+
+-- [[ No weird space moveing or entering insert mode ]]
+vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 
 -- [[ Open netrw ]]
 vim.keymap.set("n", "<leader>ee", vim.cmd.Ex)
@@ -66,7 +70,19 @@ vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 -- [[ Edit packer config ]]
 vim.keymap.set("n", "<leader>ppp", "<cmd>e ~/.config/nvim/lua/jmaxwell/packer.lua<CR>");
 
+-- [[ Clear highlighting :set nohl ]]
 vim.keymap.set("n", "<leader><leader>", "<cmd>nohl<CR>")
+
+-- [[ Toggle column highlighting  ]]
+vim.keymap.set("n", "<leader>cc", function()
+  vim.o.cursorcolumn = not vim.o.cursorcolumn
+end)
+
+-- [[ Toggle relative line numbers  ]]
+vim.keymap.set("n", "<leader>nn", function()
+  vim.o.relativenumber = not vim.o.relativenumber
+end)
+
 
 -- [[ Source current file ]]
 --vim.keymap.set("n", "<leader><leader>", function()
