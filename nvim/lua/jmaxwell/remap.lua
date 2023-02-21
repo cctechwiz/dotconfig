@@ -83,6 +83,8 @@ vim.keymap.set("n", "<leader>nn", function()
   vim.o.relativenumber = not vim.o.relativenumber
 end)
 
+-- [[ Close all but current buffer ]]
+vim.keymap.set("n", "<leader>bo", "<cmd>%bd|e#|bd#<CR>")
 
 -- [[ Source current file ]]
 --vim.keymap.set("n", "<leader><leader>", function()
