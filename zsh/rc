@@ -5,6 +5,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # PATH
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=$PATH:$(go env GOPATH)/bin
+export PATH="${PATH}:${HOME}/.krew/bin"
 
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="" # Using Starship instead (see below)
