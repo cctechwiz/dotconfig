@@ -72,14 +72,15 @@ fi
 #fi
 
 
-#echo ""
-#echo "---------------"
-#echo "Configuring git"
-#echo "---------------"
-#if ! command -v zsh > /dev/null 2>&1
-#then
-#  echo >&2 "git could not be found, install with 'brew install git' or more likely xcode command line tools"
-#else
-#  ln -s $HOME/.config/git/config $HOME/.gitconfig
-#fi
+echo ""
+echo "---------------"
+echo "Configuring git"
+echo "---------------"
+if ! command -v zsh > /dev/null 2>&1
+then
+  echo >&2 "git could not be found, install with 'brew install git' or more likely xcode command line tools"
+else
+  git config --global alias.all '!f() { find . -name .git -type d -prune -exec dirname {} \; | xargs -I{} bash -c "echo '\n## Pulling: {}' && git -C {} $1"; }; f' 
+  #ln -s $HOME/.config/git/config $HOME/.gitconfig
+fi
 
