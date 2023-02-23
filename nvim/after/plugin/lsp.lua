@@ -3,11 +3,11 @@ local lsp = require("lsp-zero")
 lsp.preset("recommended")
 
 lsp.ensure_installed({
-  'tsserver',
-  'gopls',
-  'lua_ls',
-  --'pyright',
-  --'gdscript',
+  'tsserver', -- [[ Typescript/Javascript ]]
+  'gopls', -- [[ Golang ]]
+  'lua_ls', -- [[ Lua ]]
+  'jedi_language_server', -- [[ Python ]]
+  --'gdscript', -- [[ Godot/GDScript ]]
 })
 
 --neodev replaces the following config block but only in neovim lua configs
