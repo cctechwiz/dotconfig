@@ -15,7 +15,7 @@ local toggleRelativenumber = vim.api.nvim_create_augroup('toggleRelativenumber',
 vim.api.nvim_create_autocmd({ 'BufEnter', 'FocusGained', 'InsertLeave', 'WinEnter' }, {
   desc = 'Enable relative line numbers when entering a buffer',
   group = toggleRelativenumber,
-  callback = function ()
+  callback = function()
     vim.wo.relativenumber = true
   end
 })
@@ -23,8 +23,17 @@ vim.api.nvim_create_autocmd({ 'BufEnter', 'FocusGained', 'InsertLeave', 'WinEnte
 vim.api.nvim_create_autocmd({ 'BufLeave', 'FocusLost', 'InsertEnter', 'WinLeave' }, {
   desc = 'Remove relative line numbers when leaving a buffer',
   group = toggleRelativenumber,
-  callback = function ()
+  callback = function()
     vim.wo.relativenumber = false
   end
 })
 
+-- [[ Disable tabexapnd in go files (use tabs not spaces) ]]
+local goFiles = vim.api.nvim_create_augroup('goFiles', { clear = true })
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "go",
+  callback = function()
+    vim.o.expandtab = false
+  end,
+  group = goFiles,
+})
