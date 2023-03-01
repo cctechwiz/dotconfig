@@ -53,6 +53,16 @@ return require('packer').startup(function(use)
   }
 
 
+  --golang
+  use {
+    'ray-x/go.nvim',
+    requires = {
+      -- Floating window support
+      'ray-x/guihua.lua', -- Optional
+    }
+  }
+
+
   --git
   use 'tpope/vim-fugitive'
 
@@ -70,7 +80,6 @@ return require('packer').startup(function(use)
     requires = 'nvim-tree/nvim-web-devicons'
   }
   use 'vimwiki/vimwiki'
-
 
 
   --themes
