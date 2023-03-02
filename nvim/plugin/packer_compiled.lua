@@ -220,6 +220,11 @@ _G.packer_plugins = {
     path = "/Users/jmaxwell/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
   },
+  ["vim-kitty-navigator"] = {
+    loaded = true,
+    path = "/Users/jmaxwell/.local/share/nvim/site/pack/packer/start/vim-kitty-navigator",
+    url = "https://github.com/knubie/vim-kitty-navigator"
+  },
   vimwiki = {
     loaded = true,
     path = "/Users/jmaxwell/.local/share/nvim/site/pack/packer/start/vimwiki",

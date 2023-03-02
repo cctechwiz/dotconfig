@@ -4,13 +4,11 @@ return require('packer').startup(function(use)
   --packer
   use 'wbthomason/packer.nvim'
 
-
   --telescope
   use {
     'nvim-telescope/telescope.nvim', branch = '0.1.x',
     requires = { { 'nvim-lua/plenary.nvim' } }
   }
-
 
   --treesitter
   use {
@@ -52,7 +50,6 @@ return require('packer').startup(function(use)
     }
   }
 
-
   --golang
   use {
     'ray-x/go.nvim',
@@ -62,10 +59,8 @@ return require('packer').startup(function(use)
     }
   }
 
-
   --git
   use 'tpope/vim-fugitive'
-
 
   --misc
   use 'theprimeagen/harpoon'
@@ -81,6 +76,11 @@ return require('packer').startup(function(use)
   }
   use 'vimwiki/vimwiki'
 
+  --terminal integration
+  use {
+    'knubie/vim-kitty-navigator',
+    run = 'cp ./*.py ~/.config/kitty/',
+  }
 
   --themes
   use 'EdenEast/nightfox.nvim'
