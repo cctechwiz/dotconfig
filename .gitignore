@@ -12,3 +12,6 @@ plugged
 # GitHub CLI
 gh/
 git/
+
+# Misc
+htop/
