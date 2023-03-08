@@ -75,7 +75,8 @@ done
 #eval "$(bw completion --shell zsh); compdef _bw bw;"
 #eval "$(hugo completion zsh); compdef _hugo hugo;"
 
-export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"
+#fnm
+eval "$(fnm env --use-on-cd)"
 
 # https://starship.rs/config
 eval "$(starship init zsh)"
