@@ -18,7 +18,7 @@ require("bufferline").setup {
 require('lualine').setup {
   options = {
     icons_enabled = true,
-    theme = 'nightfox',
+    theme = 'tokyonight-night',
     --component_separators = '|',
     --section_separators = '',
     component_separators = { left = '', right = '' },
