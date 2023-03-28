@@ -7,6 +7,10 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=$PATH:$(go env GOPATH)/bin
 export PATH="${PATH}:${HOME}/.krew/bin"
 
+# https://www.rust-lang.org/tools/install
+# curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+. "$HOME/.cargo/env"
+
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="" # Using Starship instead (see below)
 #ZSH_THEME="amuse"
@@ -75,7 +79,8 @@ done
 #eval "$(bw completion --shell zsh); compdef _bw bw;"
 #eval "$(hugo completion zsh); compdef _hugo hugo;"
 
-export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"
+#fnm
+eval "$(fnm env --use-on-cd)"
 
 # https://starship.rs/config
 eval "$(starship init zsh)"
