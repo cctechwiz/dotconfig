@@ -40,6 +40,18 @@ else
   ln -s $HOME/.config/tmux/tmux.theme $HOME/.tmux.theme
 fi
 
+echo ""
+echo "-------------------"
+echo "Configuring espanso"
+echo "-------------------"
+if ! command -v espanso > /dev/null 2>&1
+then
+  echo >&2 "espanso could not be found, install with 'brew install espanso'"
+else
+  echo "Linking espanso configs"
+  ln -s $HOME/.config/espanso "/Users/jmaxwell/Library/Application Support/espanso/"
+fi
+
 
 echo ""
 echo "------------------"
