@@ -1,0 +1,10 @@
+# espanso match file
+
+# For a complete introduction, visit the official docs at: https://espanso.org/docs/
+matches:
+  # Create a markdown link from copied link
+  - trigger: ";["
+    replace: "[$|$]({{clipboard}})"
+    vars:
+      - name: "clipboard"
+        type: "clipboard"
