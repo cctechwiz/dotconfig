@@ -85,4 +85,5 @@ return require('packer').startup(function(use)
   --themes
   use 'EdenEast/nightfox.nvim'
   use 'folke/tokyonight.nvim'
+  use 'sainnhe/everforest'
 end)
