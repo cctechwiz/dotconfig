@@ -10,6 +10,7 @@ alias hg="kitty +kitten hyperlinked_grep"
 
 # Neovim
 alias vim='nvim'
+alias v='nvim .'
 
 # Ripgrep
 alias rf="rg --files-with-matches"
