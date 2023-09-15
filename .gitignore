@@ -19,3 +19,5 @@ glab-cli/
 op/
 vaultconfig
 vifm/
+
+nvim/plugin/packer_compiled.lua
