@@ -8,6 +8,7 @@ undodir
 autoload
 plugged
 .netrwhist
+nvim/plugin/packer_compiled.lua
 
 # GitHub CLI
 gh/
@@ -20,4 +21,3 @@ op/
 vaultconfig
 vifm/
 
-nvim/plugin/packer_compiled.lua
