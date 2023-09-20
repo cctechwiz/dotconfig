@@ -11,8 +11,8 @@ require('telescope').setup {
       '--hidden',
     },
     file_ignore_patterns = {
-     "node_modules", ".git", "yarn.lock"
-   },
+      "node_modules", ".git", "yarn.lock"
+    },
   },
 }
 
