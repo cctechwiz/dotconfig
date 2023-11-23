@@ -14,6 +14,10 @@ require'nvim-treesitter.configs'.setup {
     "typescript",
     "vim",
     "vimdoc",
+    "vue",
+    "html",
+    "css",
+    "scss",
   },
 
   -- Install parsers synchronously (only applied to `ensure_installed`)
@@ -24,7 +28,7 @@ require'nvim-treesitter.configs'.setup {
   auto_install = true,
 
   -- List of parsers to ignore installing (for "all")
-  ignore_install = { "javascript" },
+  --ignore_install = { "javascript" },
 
   highlight = {
     enable = true,
