@@ -50,6 +50,12 @@ return require('packer').startup(function(use)
     }
   }
 
+  --sourcegraph cody
+  use {
+    'sourcegraph/sg.nvim',
+    run = 'nvim -l build/init.lua',
+  }
+
   --golang
   use {
     'ray-x/go.nvim',
