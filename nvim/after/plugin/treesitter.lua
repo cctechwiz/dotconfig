@@ -8,9 +8,16 @@ require'nvim-treesitter.configs'.setup {
     "lua",
     "make",
     "markdown",
+    "markdown_inline",
+    "php",
     "python",
     "typescript",
     "vim",
+    "vimdoc",
+    "vue",
+    "html",
+    "css",
+    "scss",
   },
 
   -- Install parsers synchronously (only applied to `ensure_installed`)
@@ -21,7 +28,7 @@ require'nvim-treesitter.configs'.setup {
   auto_install = true,
 
   -- List of parsers to ignore installing (for "all")
-  ignore_install = { "javascript" },
+  --ignore_install = { "javascript" },
 
   highlight = {
     enable = true,
@@ -31,5 +38,8 @@ require'nvim-treesitter.configs'.setup {
     -- Using this option may slow down your editor, and you may see some duplicate highlights.
     -- Instead of true it can also be a list of languages
     additional_vim_regex_highlighting = false,
+  },
+  indent = {
+    enable = true,
   },
 }
