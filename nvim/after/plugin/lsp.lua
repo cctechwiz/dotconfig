@@ -92,3 +92,5 @@ vim.diagnostic.config({
 })
 
 require('fidget').setup()
+
+require("sg").setup()

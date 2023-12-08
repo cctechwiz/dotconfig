@@ -28,3 +28,7 @@ end)
 vim.keymap.set('n', '<leader>fr', function()
   builtin.lsp_references({ noremap = true, silent = true })
 end)
+
+vim.keymap.set('n', '<leader>ss', function()
+  require('sg.extensions.telescope').fuzzy_search_results()
+end)
