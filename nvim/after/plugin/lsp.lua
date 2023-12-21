@@ -7,6 +7,7 @@ lsp.ensure_installed({
   'gopls', -- [[ Golang ]]
   'lua_ls', -- [[ Lua ]]
   'jedi_language_server', -- [[ Python ]]
+  'intelephense', -- [[ PHP ]]
   --'gdscript', -- [[ Godot/GDScript ]]
 })
 
@@ -39,6 +40,8 @@ lsp.configure('lua_ls', {
       }
     }
 })
+
+lsp.configure("intelephense")
 
 
 local cmp = require('cmp')
