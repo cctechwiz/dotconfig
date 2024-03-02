@@ -3,6 +3,10 @@ alias ll='ls -hal'
 alias la='ls -hal'
 alias ..='cd ..'
 alias ...='cd ../..'
+alias p=pbpaste
+alias c=pbcopy
+alias vm='python3 $HOME/Dev/fabric/helpers/vm '
+alias vmt='python3 $HOME/Dev/fabric/helpers/vm --transcript '
 
 # Kitty
 alias theme='kitty +kitten themes'
@@ -21,3 +25,4 @@ alias gitclean="git branch --merged | egrep -v '(^\*|master|main|dev)' | xargs g
 
 # Docker
 alias dsh="docker run --rm -it --entrypoint='/bin/sh' "
+
