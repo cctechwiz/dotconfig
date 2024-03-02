@@ -1,6 +1,7 @@
 # Common
 **.private
 **.qualtrics
+**.env
 ssh/
 
 # Neovim
