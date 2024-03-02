@@ -64,6 +64,14 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
   ['<C-y>'] = cmp.mapping.confirm({ select = true }),
   ['<CR>'] = cmp.mapping.confirm({ select = true }),
   ["<C-Space>"] = cmp.mapping.complete(),
+  --https://github.com/sourcegraph/sg.nvim/blob/master/lua/sg/extensions/cmp.lua
+  ['<C-a>'] = cmp.mapping.complete {
+    config = {
+      sources = {
+        {name = "cody" },
+      },
+    },
+  },
 })
 
 --cmp_mappings['<Tab>'] = nil
