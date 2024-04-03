@@ -62,7 +62,7 @@ vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = tr
 vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 
 -- [[ Substitute word under cursor ]]
-vim.keymap.set("n", "<leader>sr", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+vim.keymap.set("n", "<leader>rs", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 -- [[ Make current file executable ]]
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
@@ -74,7 +74,7 @@ vim.keymap.set("n", "<leader>ppp", "<cmd>e ~/.config/nvim/lua/jmaxwell/packer.lu
 vim.keymap.set("n", "<leader><leader>", "<cmd>nohl<CR>")
 
 -- [[ Toggle column highlighting  ]]
-vim.keymap.set("n", "<leader>cc", function()
+vim.keymap.set("n", "<leader>hc", function()
   vim.o.cursorcolumn = not vim.o.cursorcolumn
 end)
 
@@ -90,3 +90,6 @@ vim.keymap.set("n", "<leader>bo", "<cmd>%bd|e#|bd#<CR>")
 --vim.keymap.set("n", "<leader><leader>", function()
 --    vim.cmd("so")
 --end)
+
+-- [[ Toggle Cody Chat ]]
+vim.keymap.set("n", "<leader>cc", "<cmd>CodyToggle<CR>")
