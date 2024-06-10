@@ -77,7 +77,7 @@ return require('packer').startup(function(use)
   }
   use {
     'akinsho/bufferline.nvim',
-    tag = "v3.*",
+    -- tag = "v3.*", -- Removed to fix bug with nvim >=0.10.0 per https://github.com/akinsho/bufferline.nvim/issues/903
     requires = 'nvim-tree/nvim-web-devicons'
   }
   use 'vimwiki/vimwiki'
