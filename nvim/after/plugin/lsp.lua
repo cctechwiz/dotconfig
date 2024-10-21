@@ -3,7 +3,7 @@ local lsp = require("lsp-zero")
 lsp.preset("recommended")
 
 lsp.ensure_installed({
-  'tsserver', -- [[ Typescript/Javascript ]]
+  -- 'tsserver', -- [[ Typescript/Javascript ]]
   'gopls', -- [[ Golang ]]
   'lua_ls', -- [[ Lua ]]
   'jedi_language_server', -- [[ Python ]]
