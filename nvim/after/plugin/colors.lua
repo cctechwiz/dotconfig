@@ -5,12 +5,11 @@ function SetColors(color)
   -- vim.g.tokyonight_colors = { bg_float = 'none' }
 
   -- https://github.com/sainnhe/everforest/blob/master/doc/everforest.txt (:help everforest)
-  vim.g.everforest_background = 'hard'
-  vim.g.everforest_transparent_background = 2
-  vim.g.everforest_better_performance = 1
-  vim.g.everforest_diagnostic_text_highlight = 1
-  vim.g.everforest_diagnostic_virtual_text = 'colored'
-
+  -- vim.g.everforest_background = 'hard'
+  -- vim.g.everforest_transparent_background = 2
+  -- vim.g.everforest_better_performance = 1
+  -- vim.g.everforest_diagnostic_text_highlight = 1
+  -- vim.g.everforest_diagnostic_virtual_text = 'colored'
 
   vim.cmd.colorscheme(color)
 
