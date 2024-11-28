@@ -1,5 +1,5 @@
 function SetColors(color)
-  color = color or 'everforest'
+  color = color or 'kanagawa'
 
   -- vim.g.tokyonight_dark_float = false
   -- vim.g.tokyonight_colors = { bg_float = 'none' }

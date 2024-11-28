@@ -98,4 +98,5 @@ return require('packer').startup(function(use)
   use 'EdenEast/nightfox.nvim'
   use 'folke/tokyonight.nvim'
   use 'sainnhe/everforest'
+  use "rebelot/kanagawa.nvim"
 end)
