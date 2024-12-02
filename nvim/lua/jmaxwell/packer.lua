@@ -49,7 +49,7 @@ return require('packer').startup(function(use)
       { 'rafamadriz/friendly-snippets' }, -- Optional
 
       -- Useful status updates for LSP
-      { 'j-hui/fidget.nvim', tag = 'legacy' },
+      { 'j-hui/fidget.nvim', tag = 'v1.4.5' },
 
       -- Additional lua configuration, makes nvim stuff amazing
       { 'folke/neodev.nvim' },

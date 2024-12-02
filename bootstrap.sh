@@ -40,17 +40,17 @@ else
   ln -s $HOME/.config/tmux/tmux.theme $HOME/.tmux.theme
 fi
 
-echo ""
-echo "-------------------"
-echo "Configuring espanso"
-echo "-------------------"
-if ! command -v espanso > /dev/null 2>&1
-then
-  echo >&2 "espanso could not be found, install with 'brew install espanso'"
-else
-  echo "Linking espanso configs"
-  ln -s $HOME/.config/espanso "/Users/jmaxwell/Library/Application Support/espanso/"
-fi
+# echo ""
+# echo "-------------------"
+# echo "Configuring espanso"
+# echo "-------------------"
+# if ! command -v espanso > /dev/null 2>&1
+# then
+#   echo >&2 "espanso could not be found, install with 'brew install espanso'"
+# else
+#   echo "Linking espanso configs"
+#   ln -s $HOME/.config/espanso "/Users/jmaxwell/Library/Application Support/espanso/"
+# fi
 
 
 echo ""
@@ -72,16 +72,16 @@ else
 fi
 
 
-#echo ""
-#echo "---------------"
-#echo "Configuring ssh"
-#echo "---------------"
-#if ! command -v ssh > /dev/null 2>&1
-#then
-#  echo >&2 "ssh could not be found... uh... better fix that"
-#else
-#  ln -s $HOME/.config/ssh/config $HOME/.ssh/config
-#fi
+# echo ""
+# echo "---------------"
+# echo "Configuring ssh"
+# echo "---------------"
+# if ! command -v ssh > /dev/null 2>&1
+# then
+#   echo >&2 "ssh could not be found... uh... better fix that"
+# else
+#   ln -s $HOME/.config/ssh/config $HOME/.ssh/config
+# fi
 
 
 echo ""
