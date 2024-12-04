@@ -1,6 +1,18 @@
 function SetColors(color)
   color = color or 'kanagawa'
 
+  require('kanagawa').setup({
+    colors = {
+      theme = {
+        all = {
+          ui = {
+            bg_gutter = "none"
+          }
+        }
+      }
+    }
+  })
+
   -- vim.g.tokyonight_dark_float = false
   -- vim.g.tokyonight_colors = { bg_float = 'none' }
 
