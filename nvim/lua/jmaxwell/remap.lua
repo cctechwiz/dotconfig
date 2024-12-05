@@ -1,7 +1,7 @@
 -- [[ Set leader to space ]]
 vim.g.mapleader = " "
 
--- [[ No weird space moveing or entering insert mode ]]
+-- [[ No weird space moving or entering insert mode ]]
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 
 -- [[ Open netrw ]]
@@ -52,6 +52,9 @@ vim.keymap.set("n", "<C-h>", "<C-w>h")
 vim.keymap.set("n", "<C-j>", "<C-w>j")
 vim.keymap.set("n", "<C-k>", "<C-w>k")
 vim.keymap.set("n", "<C-l>", "<C-w>l")
+
+-- [[ Navigate splits ]]
+vim.keymap.set("n", "<leader>=", "<C-w>=")
 
 -- [[ Navigate buffers ]]
 vim.keymap.set("n", "<A-h>", "<cmd>bp<CR>")
