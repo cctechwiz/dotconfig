@@ -2,6 +2,8 @@ function SetColors(color)
   color = color or 'kanagawa'
 
   require('kanagawa').setup({
+    undercurl = true,
+    transparent = true,
     colors = {
       theme = {
         all = {

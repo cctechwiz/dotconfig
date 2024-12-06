@@ -136,23 +136,4 @@ alias summarize_newsletter='fabric --pattern summarize_newsletter'
 alias agility_story='fabric --pattern agility_story'
 alias analyze_spiritual_text='fabric --pattern analyze_spiritual_text'
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/jmaxwell/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/Users/jmaxwell/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/jmaxwell/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/jmaxwell/miniconda3/bin:$PATH"
-    fi
-    # Run: `conda config --set changeps1 True` to enable env printing
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 if [ -f "/Users/jmaxwell/.config/fabric/fabric-bootstrap.inc" ]; then . "/Users/jmaxwell/.config/fabric/fabric-bootstrap.inc"; fi

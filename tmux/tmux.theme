@@ -5,12 +5,12 @@ set -g status-interval 5
 # Colors
 ## Handy to help pick colors:
 ## $> for i in {0..255}; do printf "\x1b[38;5;${i}mcolour${i}\x1b[0m\n" done
-accent_color="colour71"
-bg_color="colour236"
-bell_color="colour9"
-activity_color="yellow"
-light_text="colour252"
-dark_text="black"
+accent_color="#7e9cd8"
+bg_color="#2a2a37"
+bell_color="#e46876"
+activity_color="#938aa9"
+light_text="#dcd7ba"
+dark_text="#1a1a22"
 
 # Widgets
 wg_keys_off="#([ $(tmux show-options -qv key-table) = 'off' ] && echo 'OFF #[fg=$accent_color].:.')"
