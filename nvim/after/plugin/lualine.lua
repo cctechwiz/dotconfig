@@ -1,5 +1,5 @@
 --Buffer line
-require("bufferline").setup {
+require("bufferline").setup({
   options = {
     diagnostics = "nvim_lsp",
     --diagnostics_indicator = function(count, level, diagnostics_dict, context)
@@ -12,15 +12,13 @@ require("bufferline").setup {
     --  return s
     --end
   }
-}
+})
 
 --Status line
-require('lualine').setup {
+require('lualine').setup({
   options = {
     icons_enabled = true,
-    theme = 'kanagawa',
-    --component_separators = '|',
-    --section_separators = '',
+    theme = 'github_dark_default',
     component_separators = { left = '', right = '' },
     section_separators = { left = '', right = '' },
   },
@@ -33,4 +31,4 @@ require('lualine').setup {
       }
     }
   }
-}
+})

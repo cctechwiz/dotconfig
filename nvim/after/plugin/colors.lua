@@ -1,17 +1,30 @@
 function SetColors(color)
-  color = color or 'kanagawa'
+  color = color or 'github_dark'
 
   require('kanagawa').setup({
     undercurl = true,
     transparent = true,
+    dimInactive = false,
     colors = {
       theme = {
         all = {
           ui = {
-            bg_gutter = "none"
+            bg_gutter = "none",
+            bg = "none",
           }
         }
       }
+    }
+  })
+
+  -- Default options
+  require('github-theme').setup({
+    options = {
+      hide_end_of_buffer = true, -- Hide the '~' character at the end of the buffer for a cleaner look
+      hide_nc_statusline = true, -- Override the underline style for non-active statuslines
+      transparent = true,       -- Disable setting bg (make neovim's background transparent)
+      terminal_colors = true,    -- Set terminal colors (vim.g.terminal_color_*) used in `:terminal`
+      dim_inactive = false,      -- Non focused panes set to alternative background
     }
   })
 

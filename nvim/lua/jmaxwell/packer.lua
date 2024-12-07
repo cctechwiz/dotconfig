@@ -99,4 +99,5 @@ return require('packer').startup(function(use)
   use 'folke/tokyonight.nvim'
   use 'sainnhe/everforest'
   use 'rebelot/kanagawa.nvim'
+  use 'projekt0n/github-nvim-theme'
 end)
