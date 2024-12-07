@@ -3,9 +3,11 @@ local wezterm = require 'wezterm'
 local config = wezterm.config_builder()
 
 --config.font = wezterm.font('Departure Mono', { weight = 'Regular' })
-config.font = wezterm.font('JetBrains Mono', { weight = 'Regular' })
+--config.font = wezterm.font('JetBrains Mono', { weight = 'Regular' })
+config.font = wezterm.font('JetBrainsMono Nerd Font Mono', { weight = 'Regular' })
 config.font_size = 12.0
 
+config.audible_bell = "Disabled"
 config.max_fps = 120
 config.window_close_confirmation = "NeverPrompt"
 config.window_background_opacity = 0.80
@@ -20,6 +22,7 @@ config.enable_tab_bar = false
 --config.color_scheme = 'Atelierdune (dark) (terminal.sexy)'
 --config.color_scheme = 'Breeze (Gogh)'
 --config.color_scheme = 'Cai (Gogh)'
+config.color_scheme = 'Catppuccin Mocha'
 --config.color_scheme = 'Darcula (base16)'
 --config.color_scheme = 'Dark Ocean (terminal.sexy)'
 --config.color_scheme = 'Darktooth (base16)'
@@ -40,7 +43,7 @@ config.enable_tab_bar = false
 --config.color_scheme = 'Moonfly (Gogh)' -- Good
 --config.color_scheme = 'Railscasts (base16)'
 --config.color_scheme = 'Red Planet'
-config.color_scheme = 'Terminix Dark (Gogh)' -- Good
+--config.color_scheme = 'Terminix Dark (Gogh)' -- Good
 --config.color_scheme = 'Tomorrow Night'
 --config.color_scheme = 'Vag (Gogh)'
 --config.color_scheme = 'Violet Dark'

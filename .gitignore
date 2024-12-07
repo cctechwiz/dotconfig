@@ -11,6 +11,9 @@ plugged
 .netrwhist
 nvim/plugin/packer_compiled.lua
 
+# Tmux
+tmux/plugins/
+
 # GitHub CLI
 gh/
 git/

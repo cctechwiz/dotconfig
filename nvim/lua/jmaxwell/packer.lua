@@ -94,10 +94,13 @@ return require('packer').startup(function(use)
     run = 'cp ./*.py ~/.config/kitty/',
   }
 
+  use { 'christoomey/vim-tmux-navigator' }
+
   --themes
   use 'EdenEast/nightfox.nvim'
   use 'folke/tokyonight.nvim'
   use 'sainnhe/everforest'
   use 'rebelot/kanagawa.nvim'
   use 'projekt0n/github-nvim-theme'
+  use { "catppuccin/nvim", as = "catppuccin" }
 end)
