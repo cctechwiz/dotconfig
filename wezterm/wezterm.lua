@@ -2,6 +2,8 @@ local wezterm = require 'wezterm'
 
 local config = wezterm.config_builder()
 
+config.default_cwd = wezterm.home_dir
+
 --config.font = wezterm.font('Departure Mono', { weight = 'Regular' })
 --config.font = wezterm.font('JetBrains Mono', { weight = 'Regular' })
 config.font = wezterm.font('JetBrainsMono Nerd Font Mono', { weight = 'Regular' })

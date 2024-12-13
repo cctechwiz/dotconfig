@@ -87,6 +87,7 @@ return require('packer').startup(function(use)
     requires = 'nvim-tree/nvim-web-devicons'
   }
   use 'vimwiki/vimwiki'
+  use 'NoahTheDuke/vim-just'
 
   --terminal integration
   use {

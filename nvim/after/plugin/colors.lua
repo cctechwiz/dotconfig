@@ -8,11 +8,11 @@ function SetColors(color)
       light = "latte",
       dark = "mocha",
     },
-    transparent_background = false, -- disables setting the background color.
+    transparent_background = true, -- disables setting the background color.
     show_end_of_buffer = false, -- shows the '~' characters after the end of buffers
     term_colors = true, -- sets terminal colors (e.g. `g:terminal_color_0`)
     dim_inactive = {
-      enabled = true, -- dims the background color of inactive window
+      enabled = false, -- dims the background color of inactive window
       shade = "dark",
       percentage = 0.15, -- percentage of the shade to apply to the inactive window
     },
@@ -32,7 +32,6 @@ function SetColors(color)
       properties = {},
       types = {},
       operators = {},
-      -- miscs = {}, -- Uncomment to turn off hard-coded styles
     },
     color_overrides = {},
     custom_highlights = {},
@@ -40,43 +39,40 @@ function SetColors(color)
     integrations = {
       cmp = true,
       gitsigns = true,
-      nvimtree = true,
       treesitter = true,
+      harpoon = true,
+      mason = true,
       notify = false,
-      mini = {
-        enabled = true,
-        indentscope_color = "",
-      },
-      -- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
+      -- For more plugins integrations https://github.com/catppuccin/nvim#integrations
     },
   })
 
-  require('kanagawa').setup({
-    undercurl = true,
-    transparent = true,
-    dimInactive = false,
-    colors = {
-      theme = {
-        all = {
-          ui = {
-            bg_gutter = "none",
-            bg = "none",
-          }
-        }
-      }
-    }
-  })
+  -- require('kanagawa').setup({
+  --   undercurl = true,
+  --   transparent = true,
+  --   dimInactive = false,
+  --   colors = {
+  --     theme = {
+  --       all = {
+  --         ui = {
+  --           bg_gutter = "none",
+  --           bg = "none",
+  --         }
+  --       }
+  --     }
+  --   }
+  -- })
 
   -- Default options
-  require('github-theme').setup({
-    options = {
-      hide_end_of_buffer = true, -- Hide the '~' character at the end of the buffer for a cleaner look
-      hide_nc_statusline = true, -- Override the underline style for non-active statuslines
-      transparent = true,       -- Disable setting bg (make neovim's background transparent)
-      terminal_colors = true,    -- Set terminal colors (vim.g.terminal_color_*) used in `:terminal`
-      dim_inactive = false,      -- Non focused panes set to alternative background
-    }
-  })
+  -- require('github-theme').setup({
+  --   options = {
+  --     hide_end_of_buffer = true, -- Hide the '~' character at the end of the buffer for a cleaner look
+  --     hide_nc_statusline = true, -- Override the underline style for non-active statuslines
+  --     transparent = true,       -- Disable setting bg (make neovim's background transparent)
+  --     terminal_colors = true,    -- Set terminal colors (vim.g.terminal_color_*) used in `:terminal`
+  --     dim_inactive = false,      -- Non focused panes set to alternative background
+  --   }
+  -- })
 
   -- vim.g.tokyonight_dark_float = false
   -- vim.g.tokyonight_colors = { bg_float = 'none' }

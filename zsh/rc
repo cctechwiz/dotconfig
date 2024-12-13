@@ -56,6 +56,10 @@ ZSH_THEME="" # Using Starship instead (see below)
 
 HIST_STAMPS="yyyy-mmm-dd"
 
+# Init Homebrew, which adds environment variables
+eval "$(brew shellenv)"
+fpath=($HOMEBREW_PREFIX/share/zsh/site-functions $fpath)
+
 plugins=(
 # Built-in Plugins: https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins
   #gh      # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/gh
@@ -75,13 +79,6 @@ done
 for file in $HOME/.config/zsh/secrets*; do
     source "$file"
 done
-
-# Zsh completions
-#eval "$(bw completion --shell zsh); compdef _bw bw;"
-#eval "$(hugo completion zsh); compdef _hugo hugo;"
-
-#fnm
-# eval "$(fnm env --use-on-cd)"
 
 # https://starship.rs/config
 eval "$(starship init zsh)"
