@@ -26,6 +26,12 @@ return require('packer').startup(function(use)
   }
   use 'nvim-treesitter/playground'
 
+  --fzf
+  use {
+    'junegunn/fzf.vim',
+    requires = { 'junegunn/fzf', run = ':call fzf#install()' }
+  }
+
   --lsp
   use {
     'VonHeikemen/lsp-zero.nvim',

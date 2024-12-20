@@ -56,6 +56,9 @@ ZSH_THEME="" # Using Starship instead (see below)
 
 HIST_STAMPS="yyyy-mmm-dd"
 
+# Init fzf key bindings and fuzzy completion
+source <(fzf --zsh)
+
 # Init Homebrew, which adds environment variables
 eval "$(brew shellenv)"
 fpath=($HOMEBREW_PREFIX/share/zsh/site-functions $fpath)
