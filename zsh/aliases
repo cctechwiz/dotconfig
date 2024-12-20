@@ -9,8 +9,8 @@ alias vm='python3 $HOME/Dev/fabric/helpers/vm '
 alias vmt='python3 $HOME/Dev/fabric/helpers/vm --transcript '
 
 # Kitty
-alias theme='kitty +kitten themes'
-alias hg="kitty +kitten hyperlinked_grep"
+# alias theme='kitty +kitten themes'
+# alias hg="kitty +kitten hyperlinked_grep"
 
 # Neovim
 alias vim='nvim'

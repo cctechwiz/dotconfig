@@ -89,6 +89,11 @@ return require('packer').startup(function(use)
   use 'vimwiki/vimwiki'
   use 'NoahTheDuke/vim-just'
 
+  use({
+    "iamcco/markdown-preview.nvim",
+    run = function() vim.fn["mkdp#util#install"]() end,
+  })
+
   --terminal integration
   use {
     'knubie/vim-kitty-navigator',
