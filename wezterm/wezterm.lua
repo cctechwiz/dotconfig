@@ -54,6 +54,21 @@ config.color_scheme = 'Catppuccin Mocha'
 --config.color_scheme = 'terafox'
 --config.color_scheme = 'zenwritten_dark'
 
+-- Overwritting the built-in theme colors:
+-- https://github.com/catppuccin/wezterm/blob/main/plugin/init.lua
+-- local customTheme = wezterm.color.get_builtin_schemes()["Catppuccin Mocha"]
+-- Replace teal with green
+-- customTheme.ansi[7] = "#a6e3a1"
+-- customTheme.brights[7] = "#a6e3a1"
+-- Replace teal with sapphire
+-- customTheme.ansi[7] = "#74c7ec"
+-- customTheme.brights[7] = "#74c7ec"
+
+-- config.color_schemes = {
+--   ["OLEDppuccin"] = customTheme,
+-- }
+-- config.color_scheme = 'OLEDppuccin'
+
 config.keys = {
   -- Turn off the default CMD-m Hide action, allowing CMD-m to
   -- be potentially recognized and handled by the tab
