@@ -1,3 +1,10 @@
+# Automatically start tmux if not already inside tmux
+if [[ -z "$TMUX" ]]; then
+    tmux
+    # Exit the shell when tmux is exited
+    exit
+fi
+
 # ENV
 export EDITOR=nvim
 export ZSH="$HOME/.oh-my-zsh"
