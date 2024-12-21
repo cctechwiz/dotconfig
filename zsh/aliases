@@ -23,6 +23,7 @@ alias rf="rg --files-with-matches"
 # Git
 alias gitlog="git log --graph --pretty=format:'%Cred%h%Creset - %Cblue%an%Creset %C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
 alias gitclean="git branch --merged | egrep -v '(^\*|master|main|dev)' | xargs git branch -D"
+alias lg="lazygit"
 
 # Docker
 alias dsh="docker run --rm -it --entrypoint='/bin/sh' "
