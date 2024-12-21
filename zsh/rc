@@ -69,6 +69,8 @@ plugins=(
   git     # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git
   # golang  # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/golang
   macos   # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/macos
+  docker
+  docker-compose
 
 # Community Plugins: https://github.com/orgs/zsh-users/repositories
   zsh-syntax-highlighting # https://github.com/zsh-users/zsh-syntax-highlighting
@@ -137,3 +139,5 @@ alias agility_story='fabric --pattern agility_story'
 alias analyze_spiritual_text='fabric --pattern analyze_spiritual_text'
 
 if [ -f "/Users/jmaxwell/.config/fabric/fabric-bootstrap.inc" ]; then . "/Users/jmaxwell/.config/fabric/fabric-bootstrap.inc"; fi
+
+autoload -U compinit && compinit
