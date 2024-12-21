@@ -1,2 +1,6 @@
 # Set PATH, MANPATH, etc., for Homebrew.
 eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# Set other PATHs
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH="${PATH}:${HOME}/.config/bin"

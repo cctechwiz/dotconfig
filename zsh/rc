@@ -5,61 +5,17 @@ if [[ -z "$TMUX" ]]; then
     exit
 fi
 
+# PATH
+# PATH is set in .zshprofile
+
 # ENV
 export EDITOR=nvim
 export ZSH="$HOME/.oh-my-zsh"
-
-# PATH
-export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH="${PATH}:${HOME}/.config/bin"
-
-# https://www.rust-lang.org/tools/install
-# curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-# . "$HOME/.cargo/env"
+HIST_STAMPS="yyyy-mmm-dd"
 
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="" # Using Starship instead (see below)
 #ZSH_THEME="amuse"
-
-# Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
-
-# Uncomment the following line to use hyphen-insensitive completion.
-# Case-sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
-
-# Uncomment one of the following lines to change the auto-update behavior
-# zstyle ':omz:update' mode disabled  # disable automatic updates
-# zstyle ':omz:update' mode auto      # update automatically without asking
-# zstyle ':omz:update' mode reminder  # just remind me to update when it's time
-
-# Uncomment the following line to change how often to auto-update (in days).
-# zstyle ':omz:update' frequency 13
-
-# Uncomment the following line if pasting URLs and other text is messed up.
-# DISABLE_MAGIC_FUNCTIONS="true"
-
-# Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
-
-# Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
-
-# Uncomment the following line to display red dots whilst waiting for completion.
-# You can also set it to another string to have that shown instead of the default red dots.
-# e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
-# Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
-# COMPLETION_WAITING_DOTS="true"
-
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-HIST_STAMPS="yyyy-mmm-dd"
 
 # Init fzf key bindings and fuzzy completion
 source <(fzf --zsh)
@@ -92,57 +48,5 @@ done
 
 # https://starship.rs/config
 eval "$(starship init zsh)"
-
-# Fabric
-alias fabric='/Users/jmaxwell/Library/Caches/pypoetry/virtualenvs/fabric-6DKVGAEZ-py3.11/bin/fabric'
-
-alias fabric-api='/Users/jmaxwell/Library/Caches/pypoetry/virtualenvs/fabric-6DKVGAEZ-py3.11/bin/fabric-api'
-
-alias fabric-webui='/Users/jmaxwell/Library/Caches/pypoetry/virtualenvs/fabric-6DKVGAEZ-py3.11/bin/fabric-webui'
-alias check_agreement='fabric --pattern check_agreement'
-alias label_and_rate='fabric --pattern label_and_rate'
-alias philocapsulate='fabric --pattern philocapsulate'
-alias analyze_threat_report='fabric --pattern analyze_threat_report'
-alias create_npc='fabric --pattern create_npc'
-alias analyze_prose='fabric --pattern analyze_prose'
-alias create_aphorisms='fabric --pattern create_aphorisms'
-alias analyze_prose_json='fabric --pattern analyze_prose_json'
-alias summarize_micro='fabric --pattern summarize_micro'
-alias extract_sponsors='fabric --pattern extract_sponsors'
-alias extract_article_wisdom='fabric --pattern extract_article_wisdom'
-alias extract_wisdom='fabric --pattern extract_wisdom'
-alias analyze_claims='fabric --pattern analyze_claims'
-alias create_threat_model='fabric --pattern create_threat_model'
-alias write_semgrep_rule='fabric --pattern write_semgrep_rule'
-alias compare_and_contrast='fabric --pattern compare_and_contrast'
-alias summarize='fabric --pattern summarize'
-alias extract_videoid='fabric --pattern extract_videoid'
-alias write_essay='fabric --pattern write_essay'
-alias create_keynote='fabric --pattern create_keynote'
-alias rate_content='fabric --pattern rate_content'
-alias create_video_chapters='fabric --pattern create_video_chapters'
-alias summarize_rpg_session='fabric --pattern summarize_rpg_session'
-alias create_visualization='fabric --pattern create_visualization'
-alias ai='fabric --pattern ai'
-alias extract_references='fabric --pattern extract_references'
-alias summarize_pull-requests='fabric --pattern summarize_pull-requests'
-alias extract_poc='fabric --pattern extract_poc'
-alias improve_writing='fabric --pattern improve_writing'
-alias find_hidden_message='fabric --pattern find_hidden_message'
-alias extract_recommendations='fabric --pattern extract_recommendations'
-alias rate_value='fabric --pattern rate_value'
-alias analyze_paper='fabric --pattern analyze_paper'
-alias explain_code='fabric --pattern explain_code'
-alias analyze_threat_report_trends='fabric --pattern analyze_threat_report_trends'
-alias clean_text='fabric --pattern clean_text'
-alias improve_prompt='fabric --pattern improve_prompt'
-alias analyze_incident='fabric --pattern analyze_incident'
-alias explain_docs='fabric --pattern explain_docs'
-alias create_logo='fabric --pattern create_logo'
-alias summarize_newsletter='fabric --pattern summarize_newsletter'
-alias agility_story='fabric --pattern agility_story'
-alias analyze_spiritual_text='fabric --pattern analyze_spiritual_text'
-
-if [ -f "/Users/jmaxwell/.config/fabric/fabric-bootstrap.inc" ]; then . "/Users/jmaxwell/.config/fabric/fabric-bootstrap.inc"; fi
 
 autoload -U compinit && compinit
