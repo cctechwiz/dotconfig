@@ -2,6 +2,12 @@
 
 echo "Bootstrapping new system config..."
 
+# TODO: Add brew installs
+# - fzf
+# - bat
+# - lazygit
+# - tmux
+# - wezterm
 
 echo ""
 echo "Installing Nerd Fonts"
