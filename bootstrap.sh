@@ -8,6 +8,7 @@ echo "Bootstrapping new system config..."
 # - lazygit
 # - tmux
 # - wezterm
+# - fd
 
 echo ""
 echo "Installing Nerd Fonts"
