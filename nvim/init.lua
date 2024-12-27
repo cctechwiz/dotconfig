@@ -1,19 +1,12 @@
 -- Make sure to setup `mapleader` and `maplocalleader` before
 -- loading lazy.nvim so that mappings are correct.
 -- This is also a good place to setup other settings (vim.opt)
-vim.g.mapleader = " "
-vim.g.maplocalleader = "\\"
+
+require("config.opt")
+require("config.remap")
+require("config.autocmd")
 
 require("config.lazy")
 
--- TODO: Move these to different config files
 vim.cmd.colorscheme "catppuccin"
 
-vim.opt.shiftwidth = 2
-vim.opt.clipboard = "unnamedplus"
-
--- Source current file
-vim.keymap.set("n", "<leader><leader>x", "<cmd>source %<CR>")
--- Execute Lua code under cursor or selected
-vim.keymap.set("n", "<leader>x", ":.lua<CR>")
-vim.keymap.set("v", "<leader>x", ":lua<CR>")
