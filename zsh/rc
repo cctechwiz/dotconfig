@@ -49,4 +49,7 @@ done
 # https://starship.rs/config
 eval "$(starship init zsh)"
 
+# https://sqlite-utils.datasette.io/en/stable/installation.html
+eval "$(_SQLITE_UTILS_COMPLETE=zsh_source sqlite-utils)"
+
 autoload -U compinit && compinit
