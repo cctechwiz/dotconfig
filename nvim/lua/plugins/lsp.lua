@@ -101,7 +101,7 @@ return {
       -- rust_analyzer = {},
       -- html = { filetypes = { 'html', 'twig', 'hbs'} },
 
-      tsserver = {},
+      ts_ls = {},
 
       lua_ls = {
         Lua = {
