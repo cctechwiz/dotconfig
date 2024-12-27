@@ -94,14 +94,25 @@ return {
     --
     --  If you want to override the default filetypes that your language server will attach to you can
     --  define the property 'filetypes' to the map in question.
+    --
+    --  https://github.com/williamboman/mason-lspconfig.nvim?tab=readme-ov-file#available-lsp-servers
     local servers = {
-      -- clangd = {},
-      -- gopls = {},
-      -- pyright = {},
-      -- rust_analyzer = {},
-      -- html = { filetypes = { 'html', 'twig', 'hbs'} },
+      bashls = {},
+      jqls = {},
+      jsonls = {},
+      yamlls = {},
+
+      dockerls = {},
+      docker_compose_language_service = {},
+
+      markdown_oxide = {},
 
       ts_ls = {},
+      -- eslint = {},
+      tailwindcss = {},
+      html = {},
+
+      gopls = {},
 
       lua_ls = {
         Lua = {
