@@ -31,7 +31,6 @@ return {
           cwd = vim.fn.stdpath("data") .. "/lazy"
         }
       end, { desc = 'Telescope installed packages' })
-
     end
   }
 }
