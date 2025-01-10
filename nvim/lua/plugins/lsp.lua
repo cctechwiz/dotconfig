@@ -56,7 +56,7 @@ return {
       local telescope = require('telescope.builtin')
 
       -- TODO: Move to a keymaps config file
-      nmap('<leader>rn', vim.lsp.buf.rename, '[R]e[n]ame')
+      nmap('<leader>rr', vim.lsp.buf.rename, '[R]ename')
       nmap('<leader>ca', vim.lsp.buf.code_action, '[C]ode [A]ction')
 
       nmap('gd', telescope.lsp_definitions, '[G]oto [D]efinition')

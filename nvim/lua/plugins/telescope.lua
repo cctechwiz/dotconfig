@@ -15,22 +15,41 @@ return {
 
       require('telescope').load_extension('fzf')
 
+      local nmap = function(keys, func, desc)
+        if desc then
+          desc = 'Telescope: ' .. desc
+        end
+
+        vim.keymap.set('n', keys, func, { desc = desc })
+      end
+
       local builtin = require('telescope.builtin')
-      vim.keymap.set('n', '<leader>tt', builtin.builtin, { desc = 'Telescope builtins' })
-      vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
-      vim.keymap.set('n', '<leader>fs', builtin.live_grep, { desc = 'Telescope live grep' })
-      vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
-      vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
-      vim.keymap.set("n", "<leader>fn", function()
+
+      nmap('<leader>tt', builtin.builtin, '[T]elescope builtins')
+      nmap('<leader>ff', builtin.find_files, '[F]ind [F]iles')
+      nmap('<leader>fs', builtin.live_grep, '[F]ind [S]tring (live grep)')
+      nmap('<leader>fb', builtin.buffers, '[F]ind [B]uffers')
+      nmap('<leader>fh', builtin.help_tags, '[F]ind [H]elp Tags')
+      nmap('<leader>fg', builtin.git_files, '[F]ind [G]it Files')
+
+      nmap('<leader>fD', builtin.diagnostics, '[F]ind all [D]iagnostics')
+      nmap('<leader>fd', function()
+        builtin.diagnostics {
+          bufnr = 0
+        }
+      end, '[F]ind local [D]iagnostics')
+
+      nmap("<leader>fn", function()
         builtin.find_files {
           cwd = vim.fn.stdpath("config")
         }
-      end, { desc = 'Telescope neovim config' })
-      vim.keymap.set("n", "<space>fp", function()
+      end, '[F]ind [N]eovim Config')
+
+      nmap("<space>fp", function()
         builtin.find_files {
           cwd = vim.fn.stdpath("data") .. "/lazy"
         }
-      end, { desc = 'Telescope installed packages' })
+      end, '[F]ind Installed [P]ackages')
     end
   }
 }

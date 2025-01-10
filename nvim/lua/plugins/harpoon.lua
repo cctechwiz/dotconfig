@@ -9,19 +9,27 @@ return {
     config = function()
       local harpoon = require("harpoon")
 
+      local nmap = function(keys, func, desc)
+        if desc then
+          desc = 'Harpoon: ' .. desc
+        end
+
+        vim.keymap.set('n', keys, func, { desc = desc })
+      end
+
       harpoon:setup()
 
-      vim.keymap.set("n", "<leader>a", function() harpoon:list():add() end)
-      vim.keymap.set("n", "<C-e>", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
+      nmap("<leader>ha", function() harpoon:list():add() end, 'Add to Harpoon List')
+      nmap("<leader>hh", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end, 'Open Harpoon List')
 
-      vim.keymap.set("n", "<leader><leader>1", function() harpoon:list():select(1) end)
-      vim.keymap.set("n", "<leader><leader>2", function() harpoon:list():select(2) end)
-      vim.keymap.set("n", "<leader><leader>3", function() harpoon:list():select(3) end)
-      vim.keymap.set("n", "<leader><leader>4", function() harpoon:list():select(4) end)
+      nmap("<leader><leader>1", function() harpoon:list():select(1) end, 'Goto Harpoon Item 1')
+      nmap("<leader><leader>2", function() harpoon:list():select(2) end, 'Goto Harpoon Item 2')
+      nmap("<leader><leader>3", function() harpoon:list():select(3) end, 'Goto Harpoon Item 3')
+      nmap("<leader><leader>4", function() harpoon:list():select(4) end, 'Goto Harpoon Item 4')
 
       -- Toggle previous & next buffers stored within Harpoon list
-      vim.keymap.set("n", "<C-S-P>", function() harpoon:list():prev() end)
-      vim.keymap.set("n", "<C-S-N>", function() harpoon:list():next() end)
+      nmap("<leader>hn", function() harpoon:list():prev() end, '[H]arpoon [N]ext Item')
+      nmap("<leader>hp", function() harpoon:list():next() end, '[H]arpoon [P]revious Item')
 
       -- basic telescope configuration
       local conf = require("telescope.config").values
@@ -41,8 +49,9 @@ return {
         }):find()
       end
 
-      vim.keymap.set("n", "<leader>fp", function() toggle_telescope(harpoon:list()) end,
-        { desc = "Open harpoon window" })
+      vim.keymap.set("n", "<leader>fp", function()
+        toggle_telescope(harpoon:list())
+      end, { desc = "Telescope: [F]ind Har[p]oon" })
 
       harpoon:extend({
         UI_CREATE = function(cx)

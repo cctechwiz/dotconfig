@@ -1,6 +1,6 @@
 -- [[ Set leader to space ]]
 vim.g.mapleader = " "
-vim.g.maplocalleader = ","
+vim.g.maplocalleader = "\\"
 
 -- [[ No weird space moving or entering insert mode ]]
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
@@ -48,7 +48,7 @@ vim.keymap.set("n", "<C-k>", "<C-w>k")
 vim.keymap.set("n", "<C-l>", "<C-w>l")
 
 -- [[ Navigate splits ]]
-vim.keymap.set("n", "<leader>=", "<C-w>=") -- Splits equalized
+vim.keymap.set("n", "<leader>=", "<C-w>=")  -- Splits equalized
 vim.keymap.set("n", "<leader>ss", "<C-w>v") -- Split vertically
 vim.keymap.set("n", "<leader>sd", "<C-w>s") -- Split horizontally
 
@@ -74,9 +74,9 @@ vim.keymap.set("v", "<leader>x", ":lua<CR>")
 vim.keymap.set("n", "<leader><leader>", "<cmd>nohl<CR>")
 
 -- [[ Toggle column highlighting  ]]
-vim.keymap.set("n", "<leader>hc", function()
-  vim.o.cursorcolumn = not vim.o.cursorcolumn
-end)
+-- vim.keymap.set("n", "<leader>hc", function()
+--   vim.o.cursorcolumn = not vim.o.cursorcolumn
+-- end)
 
 -- [[ Toggle relative line numbers  ]]
 vim.keymap.set("n", "<leader>nn", function()
