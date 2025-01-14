@@ -79,9 +79,9 @@ vim.keymap.set("n", "<leader>ppp", "<cmd>e ~/.config/nvim/lua/jmaxwell/packer.lu
 vim.keymap.set("n", "<leader><leader>", "<cmd>nohl<CR>")
 
 -- [[ Toggle column highlighting  ]]
-vim.keymap.set("n", "<leader>hc", function()
-  vim.o.cursorcolumn = not vim.o.cursorcolumn
-end)
+-- vim.keymap.set("n", "<leader>hc", function()
+--   vim.o.cursorcolumn = not vim.o.cursorcolumn
+-- end)
 
 -- [[ Toggle relative line numbers  ]]
 vim.keymap.set("n", "<leader>nn", function()
