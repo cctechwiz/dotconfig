@@ -1,9 +1,9 @@
 # Automatically start tmux if not already inside tmux
-if [[ -z "$TMUX" ]]; then
-    tmux
-    # Exit the shell when tmux is exited
-    exit
-fi
+# if [[ -z "$TMUX" ]]; then
+#     tmux
+#     # Exit the shell when tmux is exited
+#     exit
+# fi
 
 # PATH
 # PATH is set in .zshprofile
