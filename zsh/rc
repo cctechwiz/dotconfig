@@ -52,4 +52,7 @@ eval "$(starship init zsh)"
 # https://sqlite-utils.datasette.io/en/stable/installation.html
 eval "$(_SQLITE_UTILS_COMPLETE=zsh_source sqlite-utils)"
 
+# https://github.com/Schniz/fnm?tab=readme-ov-file#zsh
+eval "$(fnm env --use-on-cd --shell zsh)"
+
 autoload -U compinit && compinit
