@@ -70,6 +70,8 @@ return {
         }
       end
 
+      vim.fn.sign_define('DapBreakpoint', {text='🛑', texthl='', linehl='', numhl=''})
+
       require("dapui").setup({
         -- Set icons to characters that are more likely to work in every terminal.
         --    Feel free to remove or use ones that you like more! :)
