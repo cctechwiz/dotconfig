@@ -27,7 +27,7 @@ vim.keymap.set("n", "N", "Nzzzv", { desc = "Previous search item and center curs
 vim.keymap.set("x", "<leader>p", [["_dP]], { desc = "Paste over selected text without replacing yank register" })
 
 -- [[ Delete w/o replacing yank ]]
-vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]], { desc = "Delete without replacing yank register" })
+-- vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]], { desc = "Delete without replacing yank register" })
 
 -- [[ Disable Q ]]
 vim.keymap.set("n", "Q", "<nop>", { desc = "Disable useless Q key" })
