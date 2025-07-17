@@ -112,6 +112,8 @@ return {
       tailwindcss = {},
       html = {},
 
+      -- gdscript = {}, -- Not in mason-lspconfig definitions, manually configured below
+
       gopls = {},
 
       lua_ls = {
@@ -142,6 +144,10 @@ return {
           filetypes = (servers[server_name] or {}).filetypes,
         }
       end
+    }
+
+    require('lspconfig')["gdscript"].setup {
+      capabilities = capabilities,
     }
 
     require('lspconfig.ui.windows').default_options.border = 'rounded'
