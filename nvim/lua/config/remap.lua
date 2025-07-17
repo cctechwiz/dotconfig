@@ -70,9 +70,6 @@ vim.keymap.set("n", "<leader><leader>", "<cmd>nohl<CR>", { desc = "Clear highlig
 -- [[ Close all but current buffer ]]
 vim.keymap.set("n", "<leader>bo", "<cmd>%bd|e#|bd#<CR>", { desc = "Close all but the current buffer" })
 
--- [[ Toggle Cody Chat ]]
-vim.keymap.set("n", "<leader>cc", "<cmd>CodyToggle<CR>", { desc = "Toggle Cody Chat floating window" })
-
 -- [[ Navigate quick fix list ]]
 vim.keymap.set("n", "<leader>j", "<cmd>cnext<CR>zz", { desc = "Next quickfix location" })
 vim.keymap.set("n", "<leader>k", "<cmd>cprev<CR>zz", { desc = "Previous quickfix location" })
