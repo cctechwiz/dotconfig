@@ -28,3 +28,5 @@ alias lg="lazygit"
 # Docker
 alias dsh="docker run --rm -it --entrypoint='/bin/sh' "
 
+# Fabric
+alias fabric='fabric-ai'
