@@ -27,7 +27,7 @@ vim.keymap.set("n", "N", "Nzzzv", { desc = "Previous search item and center curs
 vim.keymap.set("x", "<leader>p", [["_dP]], { desc = "Paste over selected text without replacing yank register" })
 
 -- [[ Delete w/o replacing yank ]]
-vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]], { desc = "Delete without replacing yank register" })
+-- vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]], { desc = "Delete without replacing yank register" })
 
 -- [[ Disable Q ]]
 vim.keymap.set("n", "Q", "<nop>", { desc = "Disable useless Q key" })
@@ -74,6 +74,8 @@ vim.keymap.set("n", "<leader>bo", "<cmd>%bd|e#|bd#<CR>", { desc = "Close all but
 vim.keymap.set("n", "<leader>cc", "<cmd>CodyToggle<CR>", { desc = "Toggle Cody Chat floating window" })
 
 -- [[ Navigate quick fix list ]]
+vim.keymap.set("n", "<leader>j", "<cmd>cnext<CR>zz", { desc = "Next quickfix location" })
+vim.keymap.set("n", "<leader>k", "<cmd>cprev<CR>zz", { desc = "Previous quickfix location" })
 -- vim.keymap.set("n", "<C-j>", "<cmd>cnext<CR>zz", { desc = "Next quickfix list item" })
 -- vim.keymap.set("n", "<C-k>", "<cmd>cprev<CR>zz", { desc = "Previous quickfix list item" })
 -- vim.keymap.set("n", "<leader>j", "<cmd>lnext<CR>zz", { desc = "Next location list item" })

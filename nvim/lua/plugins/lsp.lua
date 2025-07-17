@@ -63,12 +63,12 @@ return {
       nmap('gr', telescope.lsp_references, '[G]oto [R]eferences')
       nmap('gI', telescope.lsp_implementations, '[G]oto [I]mplementation')
       nmap('<leader>D', telescope.lsp_type_definitions, 'Type [D]efinition')
-      nmap('<leader>ds', telescope.lsp_document_symbols, '[D]ocument [S]ymbols')
-      nmap('<leader>ws', telescope.lsp_dynamic_workspace_symbols, '[W]orkspace [S]ymbols')
+      nmap('<leader>S', telescope.lsp_document_symbols, 'Document [S]ymbols')
+      nmap('<leader>W', telescope.lsp_dynamic_workspace_symbols, '[W]orkspace Symbols')
 
       -- See `:help K` for why this keymap
       nmap('K', vim.lsp.buf.hover, 'Hover Documentation')
-      nmap('<leader>k', vim.lsp.buf.signature_help, 'Signature Documentation')
+      -- nmap('<leader>k', vim.lsp.buf.signature_help, 'Signature Documentation')
 
       -- Lesser used LSP functionality
       nmap('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
