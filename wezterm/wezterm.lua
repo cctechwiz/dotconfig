@@ -15,8 +15,8 @@ config.font_size = 12.0
 config.audible_bell = "Disabled"
 config.max_fps = 120
 config.window_close_confirmation = "NeverPrompt"
-config.window_background_opacity = 0.80
-config.text_background_opacity = 0.80
+config.window_background_opacity = 0.90
+config.text_background_opacity = 0.90
 config.enable_tab_bar = false
 -- config.tab_bar_at_bottom = true
 

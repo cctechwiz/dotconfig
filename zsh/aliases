@@ -7,6 +7,7 @@ alias p=pbpaste
 alias c=pbcopy
 alias vm='python3 $HOME/Dev/fabric/helpers/vm '
 alias vmt='python3 $HOME/Dev/fabric/helpers/vm --transcript '
+alias tree='tree --gitignore '
 
 # Kitty
 # alias theme='kitty +kitten themes'
@@ -24,6 +25,7 @@ alias rf="rg --files-with-matches"
 alias gitlog="git log --graph --pretty=format:'%Cred%h%Creset - %Cblue%an%Creset %C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
 alias gitclean="git branch --merged | egrep -v '(^\*|master|main|dev)' | xargs git branch -D"
 alias lg="lazygit"
+alias ghd="gh dash"
 
 # Docker
 alias dsh="docker run --rm -it --entrypoint='/bin/sh' "
