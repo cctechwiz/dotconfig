@@ -134,12 +134,13 @@ return {
     local mason_lspconfig = require 'mason-lspconfig'
 
     mason_lspconfig.setup {
+      automatic_enable = true,
       automatic_installation = true,
       ensure_installed = vim.tbl_keys(servers),
     }
 
     for server_name, _ in pairs(servers) do
-      require('lspconfig')[server_name].setup({
+      vim.lsp.config(server_name, {
         capabilities = capabilities,
         on_attach = on_attach,
         settings = servers[server_name],
@@ -158,29 +159,29 @@ return {
     --   end
     -- }
 
-    require('lspconfig')["gdscript"].setup {
+    vim.lsp.config("gdscript", {
       capabilities = capabilities,
-    }
+    })
 
     require('lspconfig.ui.windows').default_options.border = 'rounded'
 
-    vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(
-      vim.lsp.handlers.hover,
-      {
-        border = 'rounded',
-        focusable = true,
-        max_height = math.floor(vim.o.lines * 0.5),
-        max_width = math.floor(vim.o.columns * 0.7),
-      }
-    )
-    vim.lsp.handlers['textDocument/signatureHelp'] = vim.lsp.with(
-      vim.lsp.handlers.signature_help,
-      {
-        border = 'rounded',
-        max_height = math.floor(vim.o.lines * 0.5),
-        max_width = math.floor(vim.o.columns * 0.7),
-      }
-    )
+    -- vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(
+    --   vim.lsp.handlers.hover,
+    --   {
+    --     border = 'rounded',
+    --     focusable = true,
+    --     max_height = math.floor(vim.o.lines * 0.5),
+    --     max_width = math.floor(vim.o.columns * 0.7),
+    --   }
+    -- )
+    -- vim.lsp.handlers['textDocument/signatureHelp'] = vim.lsp.with(
+    --   vim.lsp.handlers.signature_help,
+    --   {
+    --     border = 'rounded',
+    --     max_height = math.floor(vim.o.lines * 0.5),
+    --     max_width = math.floor(vim.o.columns * 0.7),
+    --   }
+    -- )
 
     -- LSP Autocommands --
     --   :help vim.lsp
