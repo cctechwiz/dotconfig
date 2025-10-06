@@ -85,6 +85,11 @@ config.keys = {
     mods = 'CMD',
     action = wezterm.action.DisableDefaultAssignment,
   },
+  {
+    key="Enter",
+    mods="SHIFT",
+    action=wezterm.action{SendString="\x1b\r"}
+  },
 }
 
 return config

@@ -77,3 +77,18 @@ export HERD_PHP_82_INI_SCAN_DIR="/Users/jmaxwell/Library/Application Support/Her
 
 # Added by LM Studio CLI (lms)
 export PATH="$PATH:/Users/jmaxwell/.cache/lm-studio/bin"
+
+# bun completions
+[ -s "/Users/jmaxwell/.bun/_bun" ] && source "/Users/jmaxwell/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+
+# Herd injected PHP 8.5 configuration.
+export HERD_PHP_85_INI_SCAN_DIR="/Users/jmaxwell/Library/Application Support/Herd/config/php/85/"
+
+
+# Herd injected PHP 8.4 configuration.
+export HERD_PHP_84_INI_SCAN_DIR="/Users/jmaxwell/Library/Application Support/Herd/config/php/84/"
