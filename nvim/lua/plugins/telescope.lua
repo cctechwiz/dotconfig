@@ -13,6 +13,16 @@ return {
         }
       }
 
+      -- nvim-treesitter's `main` branch dropped the legacy `parsers.ft_to_lang`
+      -- helper that telescope 0.1.x expects. Route previewer highlighting
+      -- through Neovim's built-in treesitter instead.
+      local previewer_utils = require('telescope.previewers.utils')
+      previewer_utils.ts_highlighter = function(bufnr, ft)
+        local lang = vim.treesitter.language.get_lang(ft)
+        if not lang then return false end
+        return pcall(vim.treesitter.start, bufnr, lang)
+      end
+
       require('telescope').load_extension('fzf')
 
       local nmap = function(keys, func, desc)
