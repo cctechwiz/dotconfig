@@ -4,6 +4,7 @@ return {
     branch = "main",
     lazy = false,
     build = ":TSUpdate",
+    dependencies = { "neovim-treesitter/treesitter-parser-registry" },
     config = function()
       require("nvim-treesitter").setup({})
 
